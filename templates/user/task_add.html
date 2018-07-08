@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
+    <title>买买买</title>
+    <link rel="shortcut icon" href="../../static/base/images/cart.png">
+    <link rel="stylesheet" href="../../static/base/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/base/css/bootstrap-movie.css">
+
+    <style>
+        .navbar-brand>img {
+            display: inline;
+        }
+        .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{
+            padding-right: 3px;
+            padding-left: 3px;
+        }
+        .media{
+            padding:3px;
+            border:1px solid #ccc
+        }
+    </style>
+</head>
+
+<body>
+<!--导航-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!--小屏幕导航按钮和logo-->
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="index.html" class="navbar-brand" style="width:250px;">
+                <img src="../../static/base/images/cart.png" style="height:30px;">&nbsp;买买买
+            </a>
+        </div>
+        <!--小屏幕导航按钮和logo-->
+        <!--导航-->
+        <div class="navbar-collapse collapse">
+            <form class="navbar-form navbar-left" role="search" style="margin-top:18px;">
+                <div class="form-group input-group">
+                    <input type="text" class="form-control" placeholder="请输入订单号">
+                    <span class="input-group-btn">
+                        <a class="btn btn-default" href="search.html"><span class="glyphicon glyphicon-search"></span>&nbsp;搜索</a>
+                    </span>
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="curlink" href="login.html"><span class="glyphicon glyphicon-log-in"></span>&nbsp;登录</a>
+                </li>
+                <li>
+                    <a class="curlink" href="register.html"><span class="glyphicon glyphicon-plus"></span>&nbsp;注册</a>
+                </li>
+                <li>
+                    <a class="curlink" href="logout.html"><span class="glyphicon glyphicon-log-out"></span>&nbsp;退出</a>
+                </li>
+                <li>
+                    <a class="curlink" href="task_list.html"><span class="glyphicon glyphicon-user"></span>&nbsp;会员</a>
+                </li>
+            </ul>
+        </div>
+        <!--导航-->
+
+    </div>
+</nav>
+<!--导航-->
+<!--内容-->
+<div class="container" style="margin-top:76px">
+    <div class="col-md-2">
+        <div class="list-group">
+            <a href="task_add.html" class="list-group-item active">
+                <span class="glyphicon glyphicon-plus"></span>&nbsp;添加任务
+            </a>
+             <a href="task_list.html" class="list-group-item">
+                <span class="glyphicon glyphicon-list-alt"></span>&nbsp;查看任务
+            </a>
+            <a href="pwd.html" class="list-group-item">
+                <span class="glyphicon glyphicon-lock"></span>&nbsp;修改密码
+            </a>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h3 class="panel-title"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;添加任务</h3>
+            </div>
+            <div class="panel-body">
+                <form role="form">
+                    <fieldset>
+                            <div class="form-group">
+                                <label for="input_goods_id"><span class="glyphicon glyphicon-gift"></span>&nbsp;商品编号</label>
+                                <input id="input_goods_id" class="form-control" placeholder="商品ID" name="goods_id" type="text" autofocus value="5363894">
+                            </div>
+                            <div class="col-md-12" id="error_goods_id"></div>
+                            <div class="form-group">
+                               <label for="input_goods_name"><span class="glyphicon glyphicon-gift"></span>&nbsp;商品名称</label>
+                               <input id="input_goods_name" class="form-control" placeholder="商品ID" name="goods_name" type="text" autofocus value="联想(Lenovo)小新潮7000 13.3英寸超轻薄窄边框笔记本电脑">
+                            </div>
+                            <div class="col-md-12" id="error_goods_name"></div>
+                            <div class="form-group">
+                                <label for="input_goods_channel"><span class="glyphicon glyphicon-list"></span>&nbsp;商品渠道</label>
+                                <select class="form-control" id="input_goods_channel">
+                                	<option value="1">京东</option>
+                                	<option value="2">天猫</option>
+                              	</select> 
+                            </div>
+                            <div class="col-md-12" id="error_buy_type"></div>
+                            <div class="form-group">
+                                <label for="input_buy_type"><span class="glyphicon glyphicon-list"></span>&nbsp;购买类型</label>
+                                <select class="form-control" id="input_buy_type">
+                                	<option value="1">抢购</option>
+                                	<option value="2">秒杀</option>
+                              	</select> 
+                            </div>
+                            <div class="col-md-12" id="error_buy_type"></div>
+                            <div class="form-group">
+                                <label for="input_buy_time"><span class="glyphicon glyphicon-calendar"></span>&nbsp;抢购时间</label>
+                                <input id="input_buy_time" class="form-control" placeholder="抢购时间" name="buy_time" type="text" autofocus value="2018-7-8 17:30:00">
+                            </div>
+                            <div class="col-md-12" id="error_buy_time"></div>
+                            <div class="form-group">
+                               <label for="input_original_price"><span class="glyphicon glyphicon-euro"></span>&nbsp;原价</label>
+                               <input id="input_original_price" class="form-control" placeholder="原价" name="original_price" type="text" autofocus value="￥5599.00">
+                            </div>
+                            <div class="col-md-12" id="error_buy_price"></div>
+                            <div class="form-group">
+                               <label for="input_buy_price"><span class="glyphicon glyphicon-euro"></span>&nbsp;购买价</label>
+                               <input id="input_buy_price" class="form-control" placeholder="商品ID" name="buy_price" type="text" autofocus value="￥4998.00">
+                            </div>
+                            <div class="col-md-12" id="error_buy_price"></div>
+                        <a href="user.html" class="btn btn-success"><span class="glyphicon glyphicon-saved"></span>&nbsp;保存修改</a>
+                        </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--内容-->
+<!--底部-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    ©&nbsp;2018&nbsp;quick_buy.com&nbsp;京ICP备 136248715号-1
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--底部-->
+
+</body>
+</html>
