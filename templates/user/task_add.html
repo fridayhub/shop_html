@@ -128,7 +128,12 @@
                             <div class="col-md-12" id="error_buy_time"></div>
                             <div class="form-group">
                                <label for="input_original_price"><span class="glyphicon glyphicon-euro"></span>&nbsp;原价</label>
-                               <input id="input_original_price" class="form-control" placeholder="原价" name="original_price" type="text" autofocus value="￥5599.00">
+                               <!--<input id="input_original_price" class="form-control" placeholder="原价" name="original_price" type="text" autofocus value="￥5599.00">-->
+                               <div class="input-group">
+                               		<span class="input-group-addon">￥</span>
+			                        <input type="text" id="input_original_price" class="form-control valid" id="price" name="price" value="120">
+			                        
+			                    </div>
                             </div>
                             <div class="col-md-12" id="error_buy_price"></div>
                             <div class="form-group">
@@ -159,4 +164,13 @@
 <!--底部-->
 
 </body>
+<script type="text/javascript" src="../../static/base/js/jquery.min.js" ></script>
+<script type="text/javascript" src="../../static/base/js/bootstrap.js" ></script>
+<script type="text/javascript" src="../../static/base/laydate/laydate.js" ></script>
+<script>
+laydate.render({
+  elem: '#input_buy_time', //指定元素
+  type: 'datetime',
+}); 
+</script>
 </html>
